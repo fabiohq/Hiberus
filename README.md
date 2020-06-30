@@ -55,6 +55,7 @@ PagoPendienteEntity
 #### co.com.microconsulta.controller: 
 Este paquete cuenta con la clase ConsultaPagoCtrl etiquetiada como @RestController y mapeada como /consulta con la etiqueta @RequestMapping. Esta clase contiene el servicio que se publicará para que sea consumido.
 Servicio: EL servicio creado se consume bajo el nombre de documento y recibe un parámetro tipo String el cual representa el documento del cliente que va a realizar el pago y retorna un Json con la siguiente estructura:
+#### Json Response
 {
     "estado": "0",
     "descripcion": "Transaccion Exitosa",
@@ -93,7 +94,7 @@ Servicio: EL servicio creado se consume bajo el nombre de documento y recibe un 
     ]
 }
 
-Descripcion del Json Response
+#### Descripción del Json Response
  "estado": "0",--> Estado de la transacción valor cero Exitosa, diferente de cero Error
 "descripcion": "Transaccion Exitosa",--> Mensaje que indica explicitamente como se comportó la transaccion
 "pagoPendiente": null,-->Objeto que contiene los datos del cliente que tiene la deuda, Importante: para las consultas por documento se retorna nulo
@@ -153,6 +154,7 @@ PagoPendienteEntity
 #### co.com.microconsulta.controller: 
 Este paquete cuenta con la clase ConsultaPagoCtrl etiquetiada como @RestController y mapeada como /consulta con la etiqueta @RequestMapping. Esta clase contiene el servicio que se publicará para que sea consumido.
 Servicio: EL servicio creado se consume bajo el nombre de referencia y recibe un parámetro tipo String el cual representa la referencia del pago, retornando un Json con la siguiente estructura:
+####
 {
     "estado": "0",
     "descripcion": "Transaccion Exitosa",
@@ -169,7 +171,7 @@ Servicio: EL servicio creado se consume bajo el nombre de referencia y recibe un
     "pagosPendientes": null
 }
 
-Descripcion del Json Response
+#### Descripcion del Json Response
  "estado": "0",--> Estado de la transacción valor cero Exitosa, diferente de cero Error
 "descripcion": "Transaccion Exitosa",--> Mensaje que indica explicitamente como se comportó la transaccion
 "pagoPendiente": {,-->Objeto que contiene los datos del cliente que tiene la deuda.
@@ -229,7 +231,7 @@ PagoPendienteEntity
 #### co.com.micropago.controller: 
 Este paquete cuenta con la clase RegistroPagoCtrl etiquetiada como @RestController y mapeada como /registro con la etiqueta @RequestMapping. Esta clase contiene el servicio que se publicará para que sea consumido.
 Servicio: EL servicio creado se consume bajo el nombre de pago y recibe un Json, con los datos del pago que se van a registrar en la base de dtaos
-JSon Request
+#### JSon Request
 {
     "detallePago": {
         "valor": 10000.0,
@@ -245,7 +247,7 @@ JSon Request
     }
 }
 
-Descripcion del Json Request
+#### Descripcion del Json Request
  "detallePago":{,--> Objeto que encapsula los datos del detalle del pago
 "valor": 10000.0, --> Valor a pagar
 "referencia": "12345",--> Número de referencia de la deuda
@@ -256,7 +258,7 @@ Descripcion del Json Request
 "docVendedor":"14796524"--> Documento del vendedor
 "valor": 10000.0--> valor del pago
 
-JSon Response
+#### JSon Response
 {
     "estado": "0",
     "descripcion": "Transaccion Exitosa",
@@ -275,7 +277,7 @@ JSon Response
     }
 }
 
-Descripcion del Json Response
+#### Descripcion del Json Response
 "estado": "0",--> Estado de la transacción valor cero Exitosa, diferente de cero Error
 "descripcion": "Transaccion Exitosa",--> Mensaje que indica explicitamente como se comportó la transaccion
 "idDetallePago": 0,-->Id del detalle del pago
@@ -373,7 +375,7 @@ PagoPendienteEntity
 #### co.com.micropago.controller: 
 Este paquete cuenta con la clase RegistroPagoCtrl etiquetiada como @RestController y mapeada como /registro con la etiqueta @RequestMapping. Esta clase contiene el servicio que se publicará para que sea consumido.
 Servicio: EL servicio creado se consume bajo el nombre de pago y recibe un Json, con los datos del pago que se van a registrar en la base de dtaos
-JSon Request
+#### JSon Request
 {
     "docVendedor":"14796532",
     "detallePagos": [
@@ -398,7 +400,7 @@ JSon Request
     ]
 }
 
-Descripcion del Json Request
+#### Descripcion del Json Request
 "docVendedor":"14796532",--> Documento del vendedor
  "detallePagos": [--> Arraay que contiene los objetos de tipo detalle pago
 "valor": 10000.0, --> Valor a pagar
@@ -407,7 +409,7 @@ Descripcion del Json Request
 "nombreCliente": "Fabio",--> Nombre completo del cliente
 
 
-JSon Response
+#### JSon Response
 {
     "estado": "0",
     "descripcion": "Transaccion Exitosa",
@@ -449,7 +451,7 @@ JSon Response
         }
     ]
 }
-Descripcion del Json Response
+#### Descripcion del Json Response
 "estado": "0",--> Estado de la transacción valor cero Exitosa, diferente de cero Error
 "descripcion": "Transaccion Exitosa",--> Mensaje que indica explicitamente como se comportó la transaccion
 "fehcaPago": "2020-06-30",--> fecha en la que se realizó el pago
